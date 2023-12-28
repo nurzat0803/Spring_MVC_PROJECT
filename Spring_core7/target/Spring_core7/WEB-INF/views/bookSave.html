@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Book save!</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+    <form th:action="@{/books}" method="post" th:object="${bookSave}">
+        <input type="hidden" name="id" th:field="*{id}">
+        <br>
+        <input type="text" name="bookAuthor" th:field="*{bookAuthor}">
+        <br>
+        <input type="text" name="price" th:field="*{price}">
+        <br>
+        <br>
+        <button type="submit">Save</button>
+        <br>
+    </form>
+</body>
+</html>
+
